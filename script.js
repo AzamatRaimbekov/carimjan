@@ -1,7 +1,7 @@
 const shareData = {
   title: "Пулатов Каримжан",
   text: "+996 502 28 88 82",
-  url: "https://developer.mozilla.org",
+  url: "https://carimjan.vercel.app/",
 };
 
 const btn = document.querySelector("buttons2");
