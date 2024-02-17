@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="assets/said.png" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Пулатов Каримжан</title>
+	</head>
+
+	<body class="body">
+		<div class="container">
+			<div class="bg__image">
+				<img src="assets/Frame 1981920065.png" />
+			</div>
+
+			<div class="main__data">
+				<div class="image">
+					<img src="./assets/said.png" />
+				</div>
+				<div class="textBlock">
+					<h3 class="title">Пулатов Каримжан</h3>
+					<p class="subtitle">Предприниматель</p>
+				</div>
+
+				<div class="contacts">
+					<div class="contact__item">
+						<img src="icons/call.svg" />
+						<a target="_blank" href="tel:+996 502 28 88 82"
+							>+996 502 28 88 82</a
+						>
+					</div>
+					<div class="contact__item">
+						<img src="icons/free-icon-social-media-6433684 1.svg" />
+						<a target="_blank" href="https://t.me/+996 502 28 88 82"
+							>+996 502 28 88 82</a
+						>
+					</div>
+					<div class="contact__item">
+						<img src="icons/Subtract.svg" />
+						<a
+							target="_blank"
+							href="https://www.instagram.com/nero_bianco_coffee/"
+							>@nero_biancо_coffee</a
+						>
+					</div>
+				</div>
+
+				<div class="buttons">
+					<a href="folders/Компания.vcf" class="buttons1">
+						Добавить в контакты
+					</a>
+					<button class="buttons2">Поделиться контактом</button>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', event => {
+			const shareData = {
+				title: 'Пулатов Каримжан',
+				text: '+996 502 28 88 82',
+				url: 'https://developer.mozilla.org',
+			}
+
+			const btn = document.querySelector('.buttons2')
+
+			btn?.addEventListener('click', async () => {
+				console.log('Button clicked')
+				try {
+					await navigator.share(shareData)
+					console.log('Data shared successfully')
+				} catch (err) {
+					console.error('Error sharing the data', err)
+				}
+			})
+		})
+	</script>
+</html>
